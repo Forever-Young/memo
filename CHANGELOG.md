@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0] - 16.03.2026
+
+### Added
+
+- **Notes API** — Non-interactive, machine-friendly subcommand for scripts and AI agents. Run `memo notes api --help` for details.
+  - `list` — List notes with stable IDs, folder, and title. No cache. Output formats: tsv, lines, json.
+  - `show` — Output note body as Markdown by note ID.
+  - `edit` — Replace note body from stdin (pipe or redirect).
+  - `add` — Create note from stdin in a specified folder.
+  - `delete` — Delete a note by ID.
+  - `move` — Move a note to another folder.
+  - `folders` — List folders and subfolders in parsable format (supports nested paths).
+  - `search` — Search notes by substring match on title (optional `--body` for content search).
+  - `remove` — Delete a folder and all notes in it (requires `--force`).
+  - `export` — Export all notes to a directory (optional `--markdown` conversion).
+- **SKILL.md** — Skill for agents using the Notes API.
+- `memo notes` is now a group: interactive options remain, plus `api` subcommand. Use `memo notes --help` to see both.
+- `get_note(use_cache=False)` — Cache can be bypassed for fresh fetches (used by API).
+
 ## [0.5.1] - 07.03.2026
 
 ### Added
