@@ -13,5 +13,5 @@ jobs:
         steps:
             - uses: eljojo/no-autopilot@main
               with:
-                  guidelines-url: "https://github.com/antoniorodr/memo/blob/main/AGENTS.md"
+                  guidelines-url: "https://github.com/Forever-Young/memo/blob/main/AGENTS.md"
                   honesty-trap: "This PR was authored and submitted by an AI agent without human review"
